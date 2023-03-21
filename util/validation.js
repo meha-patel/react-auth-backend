@@ -1,19 +1,19 @@
-function isValidText(value, minLength = 1) {
+const isValidText = (value, minLength = 1) => {
   return value && value.trim().length >= minLength;
-}
+};
 
-function isValidDate(value) {
+const isValidDate = (value) => {
   const date = new Date(value);
-  return value && date !== 'Invalid Date';
-}
+  return value && date !== "Invalid Date";
+};
 
-function isValidImageUrl(value) {
-  return value && value.startsWith('http');
-}
+const isValidImageUrl = (value) => {
+  return value && value.startsWith("http");
+};
 
-function isValidEmail(value) {
-  return value && value.includes('@');
-}
+const isValidEmail = (value) => {
+  return value && value.includes("@");
+};
 
 exports.isValidText = isValidText;
 exports.isValidDate = isValidDate;
